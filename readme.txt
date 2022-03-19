@@ -30,7 +30,7 @@ http://www.steves-internet-guide.com/mosquitto-tls/
 # https://ming-yi.github.io/2016/08/17/Mosquitto%20MQTT%20%E5%AE%89%E8%A3%9D/
 
 ---- 
-結論是本人能力有限尚未能解決 MQTT TLS 問題, 先跳過這一段處理別的.
+尚未能解決 MQTT TLS 問題, 先跳過這一段處理別的.
 我的需求是要用 ws 當成網站系統的非同步訊息溝通中介，但是既然是網站系統 ws 和 wss 才是主要需求。
 目前發現的問題是，當 web 使用 https 時候，會強迫整個連線方式為「加密」所以 ws --> wss 這就會有問題了。
 因為不想走回頭路用 comet 只想用 websocket 但是目前還沒辦法解決這問題, 所以先擱著處理可以用的部份...
@@ -140,7 +140,7 @@ https://github.com/mgdm/Mosquitto-PHP/tree/master/examples
 $mqtthost = 'mqtt.shopeebuy.com';
 $mqttport = 1883;
 $username = 'mtchang';
-$password = 'qw';
+$password = 'xxxx';
 // ----
 $c = new Mosquitto\Client;
 $c->setCredentials($username, $password);
@@ -169,24 +169,20 @@ MQTT客戶端使用 websocket
 * MQTT.js 的說明
 https://itbilu.com/nodejs/npm/41wDnJoDg.html
 
-* 發送及接收展示頁面 http://bemtchang.jutainet.com/mqtt/index.html
-
 ----
 * 程式使用的資訊
 * MQTT server websokcet
 主機：mqtt.jangmt.com port: 11883 (websockets only ws://)
 帳號；mtchang
-密碼：qw
+密碼：xxxx
 通道：/mtchang/test
 
 * MQTT server mqtt listener
 主機：mqtt.jangmt.com port: 1883
 帳號；mtchang
-密碼：qw
+密碼：xxxx
 通道：/mtchang/test
 
-* 程式碼在這裡
-http://gitlabproject.jutainet.com/chang/mqtt
 
 
 
